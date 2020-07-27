@@ -32,10 +32,15 @@
                 <div class="price first">
                     <span>5450 р.</span>
                 </div>
-                <div class="account first">
-                    my_account@mail.ru
-                    <img src="images/arrow.png" alt="">
-                </div>
+                <ul class="account">
+                    <li><a href="">my.account@mail.ru  <img src="images/arrow.png" alt=""></a>
+                        <ul>
+                            <li><a href="">my.account01@mail.ru</a></li>
+                            <li><a href="">my.account02@mail.ru</a></li>
+                            <li><a href="">my.account03@mail.ru</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <div class="burger-menu ">
                     <div class="burger-button-wrap">
                         <div class="burger-menu_button first">
@@ -48,17 +53,6 @@
                             <li><a  class="burger-menu_link" href="#">Проекты</a></li>
                             <li><a  class="burger-menu_link" href="#">Платежи</a></li>
                         </ul>
-                        <a href="#" class="support-mobile">
-                            <img src="images/mail.png" alt="">
-                            Поддержка
-                        </a>
-                        <div class="price-mobile">
-                            <span>5450 р.</span>
-                        </div>
-                        <div class="account-mobile">
-                            my_account@mail.ru
-                            <img src="images/arrow.png" alt="">
-                        </div>
                     </nav>
 
                     <div class="burger-menu_overlay">
@@ -415,7 +409,9 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div class="btn-box second">
+                <a href="#">Больше тарифов</a>
             </div>
         </div>
     </section>
@@ -1092,10 +1088,10 @@
 <footer>
     <div class="container">
         <div class="footer d-flex align-items-center">
-            <div class="logo ">
+            <a href="#" class="logo ">
                 <img src="images/logo_footer.png" alt="">
                 <span>© 2015-2020 Zapostim</span>
-            </div>
+            </a>
             <ul class="footer-menu">
                 <li><a href="#">Публичная оферта</a></li>
                 <li><a href="#">Поддержка</a></li>
