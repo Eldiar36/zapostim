@@ -1,33 +1,5 @@
 
-window.onscroll = function showHeader() {
-    let header =    document.querySelector(".header-fixed_wrapper");
-    let header1 =    document.querySelector(".header");
-    if (window.pageYOffset > 300) {
-        header.classList.add("header-fixed");
-        header1.classList.add("header-fixed")
-    }
-    else  {
-        header.classList.remove("header-fixed")
-    }
-};
-$(document).ready(function(){
 
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 100) {
-            $('.scrollup').fadeIn();
-        } else {
-            $('.scrollup').fadeOut();
-        }
-    });
-
-    $('.scrollup').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
-        return false;
-    });
-
-
-
-});
 function burgerMenu(selector) {
     let menu = $(selector);
     let button = menu.find(".burger-button-wrap");
@@ -50,22 +22,6 @@ function burgerMenu(selector) {
     }
 }
 burgerMenu('.burger-menu');
-
-const accordions = document.querySelectorAll(".accordion-wrapper");
-for (const accordion of accordions) {
-    const panels = accordion.querySelectorAll(".accordion");
-    for (const panel of panels) {
-        const head = panel.querySelector(".accordion-header");
-        head.addEventListener('click', () => {
-            for (const otherPanel of panels) {
-                if (otherPanel !== panel) {
-                    otherPanel.classList.remove('accordion-expanded');
-                }
-            }
-            panel.classList.toggle('accordion-expanded');
-        });
-    }
-}
 $(document).ready(function(){
     $(".review-slider").owlCarousel({
         items: 3,
@@ -109,22 +65,4 @@ $(document).ready(function(){
         nav: true,
         dots:false
     });
-});
-AOS.init({
-    offset: 0,
-});
-
-jQuery(document).ready(function($) {
-    $('.popup-with-form').magnificPopup({
-        type: 'inline',
-        fixedContentPos: true
-
-    });
-});
-jQuery('.image-popup-zoom').magnificPopup({
-    type: 'image',
-    zoom: {
-        enabled: true,
-        duration: 300 //
-    }
 });
