@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Exo+2:300&subset=latin,cyrillic);
+@charset "UTF-8";
 
 * {
   margin: 0;
@@ -37,8 +37,42 @@ img {
 
 body {
   overflow-x: hidden;
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 400;
+  font-family: 'Exo2-RegularConsensed', sans-serif;
+}
+
+@font-face {
+  font-family: "Exo2-LightConsensed";
+  /* Имя шрифта */
+  src: url("../fonts/Exo2-LightCondensed.otf");
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: "Exo2-SemiBoldConsensed";
+  /* Имя шрифта */
+  src: url("../fonts/Exo2-SemiBoldCondensed.otf");
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: "Exo2-MediumConsensed";
+  /* Имя шрифта */
+  src: url("../fonts/Exo2-MediumCondensed.otf");
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: "Exo2-RegularConsensed";
+  /* Имя шрифта */
+  src: url("../fonts/Exo2-RegularCondensed.otf");
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: "Exo2-BoldConsensed";
+  /* Имя шрифта */
+  src: url("../fonts/Exo2-BoldCondensed.otf");
+  /* Путь к файлу со шрифтом */
 }
 
 .burger-menu {
@@ -292,6 +326,10 @@ header .header .right-box .account li a {
   font-size: 16px;
 }
 
+header .header .right-box .account li a:hover {
+  color: #ffffff;
+}
+
 header .header .right-box .account li ul {
   position: absolute;
   top: -500px;
@@ -302,13 +340,15 @@ header .header .right-box .account li ul {
 }
 
 header .header .right-box .account li:hover ul {
-  top: 18px;
+  z-index: 9999;
+  top: 20px;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   line-height: 1.5;
   padding: 10px;
   left: -10px;
+  padding-top: 5px;
 }
 
 header .header .right-box .account li:hover ul li {
@@ -325,7 +365,8 @@ header .header .right-box .account li img {
   font-size: 40px;
   line-height: 55px;
   color: #26292e;
-  font-weight: 600;
+  font-family: "Exo2-RegularConsensed",sans-serif;
+  font-weight: 400;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -357,7 +398,7 @@ header .header .right-box .account li img {
   display: block;
   font-size: 20px;
   color: #2f3136;
-  font-weight: 600;
+  font-family: "Exo2-MediumConsensed",sans-serif;
   margin-bottom: 25px;
   z-index: 10;
   position: relative;
@@ -422,30 +463,42 @@ header .header .right-box .account li img {
   font-size: 31px;
   line-height: 55px;
   margin: 0;
-  font-weight: 500;
 }
 
 #kraud .box p {
-  margin: 25px 0 45px 0;
+  margin: 15px 0 35px 0;
   font-size: 23px;
   line-height: 34px;
   color: #2f3136;
-  font-weight: 300;
+  font-family: "Exo2-LightConsensed",sans-serif;
 }
 
 #kraud .box-img {
-  background: url("../images/img2-mobile.png") no-repeat center;
-  background-size: contain;
-  height: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#kraud .box-img img {
+  height: 450px;
+}
+
+#kraud .box-img img.mobile {
+  display: none;
+}
+
+#kraud .box-img .btn-box {
+  margin-left: 60px;
 }
 
 #kraud .box-img .btn-box a {
@@ -550,7 +603,7 @@ header .header .right-box .account li img {
 }
 
 #tariffs .box .box-header {
-  margin-bottom: 32px;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,19 +621,21 @@ header .header .right-box .account li img {
   height: 20px;
   border-radius: 50%;
   background: #3e4a59;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 #tariffs .box .box-header .name {
   font-size: 28px;
   color: #a6b0bb;
+  font-family: "Exo2-SemiBoldConsensed",sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   margin: 0;
 }
 
 #tariffs .box .box-body ul li {
-  padding: 11px 0 9px 0;
+  height: auto;
+  padding: 5px 0 3px 0;
   border-bottom: 1px solid  #dcdcdc;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -597,7 +652,7 @@ header .header .right-box .account li img {
 #tariffs .box .box-body ul li.title p,
 #tariffs .box .box-body ul li.title span {
   font-size: 17px;
-  font-family: 'Exo2', sans-serif;
+  font-family: 'Exo2-BoldConsensed', sans-serif;
   font-weight: 700;
   color: #2f3136;
 }
@@ -605,6 +660,7 @@ header .header .right-box .account li img {
 #tariffs .box .box-body ul li p {
   font-size: 14px;
   color: #2f3136;
+  line-height: 22px;
   font-family: "Open Sans", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -614,6 +670,11 @@ header .header .right-box .account li img {
 
 #tariffs .box .box-body ul li p a {
   margin-left: 10px;
+}
+
+#tariffs .box .box-body ul li p a img {
+  width: 17px;
+  height: 17px;
 }
 
 #tariffs .box .box-body ul li img {
@@ -646,7 +707,7 @@ header .header .right-box .account li img {
   color: #26292e;
   font-size: 30px;
   line-height: 55px;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
 }
 
 #tariffs .box .box-footer .btn-box a {
@@ -820,6 +881,7 @@ header .header .right-box .account li img {
   font-size: 28px;
   color: #a6b0bb;
   font-weight: 600;
+  font-family: 'Exo2-SemiBoldConsensed', sans-serif;
   text-transform: uppercase;
   margin: 0;
 }
@@ -842,7 +904,7 @@ header .header .right-box .account li img {
 #tariffs-mobile .tariffs-item .box .box-body ul li.title p,
 #tariffs-mobile .tariffs-item .box .box-body ul li.title span {
   font-size: 17px;
-  font-family: 'Exo2', sans-serif;
+  font-family: 'Exo2-BoldConsensed', sans-serif;
   font-weight: 700;
   color: #2f3136;
 }
@@ -997,7 +1059,8 @@ header .header .right-box .account li img {
 #guarantee .box .box-info .title {
   color: #26292e;
   font-size: 22px;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
+  font-family: "Exo2-SemiBoldConsensed",sans-serif;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -1005,6 +1068,8 @@ header .header .right-box .account li img {
 #guarantee .box .box-info p {
   color: #2f3136;
   font-size: 15px;
+  font-family: "Open Sans",sans-serif;
+  font-weight: 400;
 }
 
 #guarantee-mobile {
@@ -1054,12 +1119,14 @@ header .header .right-box .account li img {
   font-size: 18px;
   margin-bottom: 17px;
   font-weight: 600;
+  font-family: "Exo2-SemiBoldConsensed",sans-serif;
   text-transform: uppercase;
 }
 
 #guarantee-mobile .box .box-info p {
   color: #2f3136;
   font-size: 15px;
+  font-family: "Open Sans",sans-serif;
 }
 
 #guarantee-mobile .owl-carousel .owl-nav button.owl-prev {
@@ -1287,6 +1354,7 @@ header .header .right-box .account li img {
   line-height: 34px;
   color: #ffffff;
   font-weight: 600;
+  font-family: "Exo2-SemiBoldConsensed",sans-serif;
   margin-bottom: 22px;
 }
 
@@ -1513,8 +1581,23 @@ footer .footer ul li:last-child {
   }
 
   #kraud .box-img {
-    background: url("../images/img2-mobile.png") no-repeat center;
-    background-size: contain;
+    height: auto;
+  }
+
+  #kraud .box-img img {
+    height: auto;
+  }
+
+  #kraud .box-img img.pc {
+    display: none;
+  }
+
+  #kraud .box-img img.mobile {
+    display: block;
+  }
+
+  #kraud .box-img .btn-box {
+    margin-left: 0;
   }
 
   #tariffs .box {
